@@ -1,0 +1,33 @@
+body {
+  font: bold 18px/36px Arial, sans-serif;
+}
+
+#container {
+  margin: 5vh auto;
+  width: 80%;
+  min-height: 60vh;
+}
+
+.flicker {
+  background-color: #ffd;
+}
+
+.neon-glow {
+  text-shadow: 5px 0 5px #0e0,
+  0 5px 5px #0e0;
+}
+
+#colorBtn {
+  display: none;
+  margin: 20px auto;
+  font-size: 2.5em;
+  background: rgba(255,255,255,.6);
+  outline: none;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 10vh;
+  font: 14px/18px Arial;
+}
