@@ -1,4 +1,5 @@
 // Always complete first task before second
+
 function inOrder(first, second) {
   return new Promise((resolve, reject) => {
     try {
