@@ -24,10 +24,14 @@ function getEpisodes(seasonId) {
     .then((res) => {
       if (res.ok) return res.json();
       throw new Error(`Could not retrieve episode data for ID ${seasonId}`);
-    }).then(data => episodes = data.reduce((acc, next) => {
-      const title = `<h3>Episode ${next.number}: ${next.name}</h3>`;
-      return acc + title + next.summary;
-    }, '')).catch(err => console.log(err.message));
+    })
+    .then((data) => {
+      data.reduce((acc, next) => {
+        const title = `<h3>Episode ${next.number}: ${next.name}</h3>`;
+        return acc + title + next.summary;
+      }, '');
+    })
+    .catch(err => console.log(err.message));
 }
 
 const psychSeason1 = getEpisodes(2016).then(data => console.log(data));
