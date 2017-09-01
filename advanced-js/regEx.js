@@ -57,3 +57,49 @@ matches = str.match(/!{3}/g).length; // 1
 // Count the number of periods in a string
 str = 'Hello. This is Rich.';
 matches = str.match(/\./g).length; // 2
+
+
+// Replace: replace a string or regEx match
+
+str = 'awesome';
+
+// First parameter as string only replaces first e
+str.replace('e', 'z'); // 'awzsome'
+
+// First parameter as regEx with 'g' flag replaces all e's
+str.replace(/e/g, 'z'); // 'awzsomz'
+
+// Second parameter can be a callback function
+str.replace(/[aeiou]/g, match => match.toUpperCase()); // 'AwEsOmE'
+
+
+// Search: return first index of first match, or -1 if not found
+
+str = 'awesome';
+
+// First parameter can be a string or regEx
+str.search('awe'); // 0
+str.search('z'); // -1
+str.search(/..e/); // 0
+str.search(/z/); // -1
+
+
+// Split: splits string into array, based on delimeter parameter
+
+str = 'Hello there. Nice!';
+str.split(/e/); // ['H', 'llo th', 'r', '. Nic', '!']
+
+str = 'one, two, three, four';
+str.split(', '); // ['one', 'two', 'three', 'four']
+
+
+// Using the RegExp constructor: first param - pattern, second param - flags
+
+function countLetters(word, letter) {
+  const regEx = new RegExp(letter, 'gi');
+  const matching = word.match(regEx);
+  return matching ? matching.length : 0;
+}
+
+countLetters('awesome', 'e'); // 2
+countLetters('awesome', 'z'); // 0
