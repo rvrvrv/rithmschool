@@ -23,6 +23,13 @@
   text-shadow: 0 -15px 10px #61DAFB;
 }
 
+.instructor-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

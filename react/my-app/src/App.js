@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import InstructorList from './InstructorList';
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,6 +28,7 @@ export default class App extends Component {
           <p className="click-counter">{this.state.clicks > 0 && `${this.state.clicks} clicks`}</p>
         </div>
         <div className="App-body">
+          <InstructorList />
         </div>
       </div>
     );
