@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
+export default class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = { clicks: 0 };
   }
 
@@ -22,15 +23,14 @@ class App extends Component {
             alt="logo"
             onClick={this.handleClick}
           />
-          <h2>Welcome to React</h2>
+          <h2>Welcome to React, {this.props.name}!</h2>
+          <p className="click-counter">{this.state.clicks > 0 && `${this.state.clicks} clicks`}</p>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p className="click-counter">{this.state.clicks > 0 && `${this.state.clicks} clicks`}</p>
+        <div className="App-body">
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+App.propTypes = { name: PropTypes.string.isRequired };
