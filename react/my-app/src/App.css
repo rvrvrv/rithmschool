@@ -20,7 +20,21 @@
 
 .click-counter {
   font-weight: bold;
-  text-shadow: 0 -15px 10px #61DAFB;
+  text-shadow: 0 -15px 10px #61dafb;
+}
+
+button {
+  color: #fff;
+  background-color:#000;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:25px;
+  transition: color .1s, background-color .6s;
+}
+
+button:hover {
+  color: #000;
+  background-color:#fff;
 }
 
 .instructor-list {
