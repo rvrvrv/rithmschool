@@ -1,0 +1,15 @@
+{
+  "short_name": "React Tutorial: Forms & Refs",
+  "name": "Rithm School Instructor Forms & Refs Tutorial",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
