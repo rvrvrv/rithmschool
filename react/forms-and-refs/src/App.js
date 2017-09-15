@@ -1,46 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import NameForm from './NameForm';
+import FoodForm from './FoodForm';
+import SecurityForm from './SecurityForm';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstName: '',
-      lastName: ''
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-  render() {
-    let greeting =
-      this.state.firstName && this.state.lastName
-        ? `Hello, ${this.state.firstName} ${this.state.lastName}!`
-        : 'Please enter your full name.';
-
-    return (
-      <div>
-        <h2>Please tell me your name.</h2>
-        <input
-          onChange={this.handleChange}
-          placeholder="What's your first name?"
-          name="firstName"
-          value={this.state.firstName}
-        />
-        <input
-          onChange={this.handleChange}
-          placeholder="What's your last name?"
-          name="lastName"
-          value={this.state.lastName}
-        />
-        <h3>{greeting}</h3>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <NameForm />
+    <hr />
+    <FoodForm />
+    <hr />
+    <SecurityForm />
+  </div>
+);
 
 export default App;
